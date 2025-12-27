@@ -1,0 +1,417 @@
+Zeus (zeus-jscl) Changelog (dd/MM/yyyy)
+=======================================
+
+
+Changes in version 1.72 (07/06/2014)
+------------------------------------
+
+07/06/2014 Changed frame auto-position logic; first frame is placed at the center of the desktop instead of 0,0.
+
+
+
+
+Changes in version 1.70 (23/05/2011)
+------------------------------------
+
+23/05/2011 Fixed EDT violation in JConsolePane.java.
+
+
+
+
+Changes in version 1.69 (03/05/2011)
+------------------------------------
+
+03/05/2011 Fixed pack() issue in JConsole; incorrect size when called showConsole() from EDT.
+
+
+
+
+Changes in version 1.68 (28/04/2011)
+------------------------------------
+
+28/04/2011 Fixed EDT violations, error handling and synchronization issues in JConsole.
+19/10/2009 Added new factory method in JMessage: showErrorQuestionMessageY().
+
+
+
+
+Changes in version 1.64 (21/09/2009)
+------------------------------------
+
+21/09/2009 Fixed bug in AutoResizeTableColumns when used together with
+           the new JTable's sorting functionality, RowSorter.
+
+
+
+
+Changes in version 1.62 (13/06/2009)
+------------------------------------
+
+09/05/2009 Minor TypeSafe API changes.
+
+20/06/2008 Removed obsolete gr.zeus.ui.swingworker, use JDK6 SwingWorker instead!
+20/06/2008 Added method to return the progress bar in JSplash (for usage with
+           Sun's new SwingWorker functionality).
+
+
+
+
+Changes in version 1.60 (20/04/2008)
+------------------------------------
+
+19/04/2008 Removed all "Deprecated" classes.
+
+23/10/2007 Bug fix: sometimes the JMessage components layout is corrupt.
+
+24/09/2007 Minor fix in TableSorter.java.
+
+27/06/2006 CustomFocusTraversalPolicy.java (modified)
+           Fixed focus with disabled components, now focus is passed
+           to the next enabled component.
+
+28/02/2006 DateHelper.java (modified)
+           Added new method: getDayNameForDate() to retrieve a date's day name.
+
+
+
+
+Changes in version 1.50 (06/01/2006)
+------------------------------------
+
+06/01/2006 JTableTester.java (added)
+           Test for both table resizing and sorting.
+06/01/2006 TableSorterIcons (added)
+           Contains all icons related to table sorting. Also added some very
+           nice icons from the Nuvola icon theme.
+06/01/2006 JTableSortTester.java (deleted)
+
+05/01/2006 JTypeSafeTester.java (modified)
+05/01/2006 SwingConfigurationManager.java (modified)
+           Created new properties in order to add the new functionality for
+           SimpleTextAreaTraversal, SimpleEditorPaneTraversal and
+           SimpleTextPaneTraversal.
+
+04/01/2006 SimpleTextAreaTraversal.java (added)
+           SimpleEditorPaneTraversal.java (added)
+           SimpleTextPaneTraversal.java (added)
+           New classes to simplify focus traversal when using JTextArea,
+           JTextPane and JEditorPane.
+
+03/01/2006 AutoResizeTableColumns.java (added)
+           Dynamically resizes any JTable every time it's data changes based on
+           header size and row data.
+
+02/01/2006 gr.zeus.ui.table.TableSorter (added)
+           Added a new TableSorter, a slightly modified version of Sun's
+           TableSorter found in the Swing Tutorial. This one also supports 
+           custom icons. NOTE: All classes under "gr.zeus.ui.table.sort" are
+           deprecated and will soon be removed! Please switch to the new and
+           better gr.zeus.ui.table.TableSorter.
+
+14/12/2005 SortableTableModel.java (modified)
+           Minor checks added to methods getValueAt() and setValueAt().
+           Also added two new methods: addRow() and removeRow(), 
+           now a SortableTableModel functions correctly when using any of 
+           these methods.
+
+04/10/2005 Added titlebar icon for JConsole and JIConsole.
+
+30/08/2005 JMessage.java (modified)
+           Added new wrapper methods: showErrorMessage(), showWarningMessage(),
+           showInfoMessage(), showQuestionMessage().
+
+
+
+
+Changes in version 1.40 (26/07/2005)
+------------------------------------
+
+26/07/2005 JTester.java (modified)
+           Added support for JMessageTester.java
+           Removed support for JConsole tests due to a strange bug of 
+           (possibly) the tester.
+26/07/2005 JConsolePaneTester.java (added)
+26/07/2005 JConsoleTester.java (modified)
+26/07/2005 JDesktopTester.java (modified)
+
+25/07/2005 JConsolePane.java (added, based on old JConsole)
+25/07/2005 JConsole.java (modified completely)
+25/07/2005 JIConsole.java (added)
+
+24/07/2005 JMessageTester.java (created)
+
+23/07/2005 added 2 icons for JMessage.java
+23/07/2005 JMessage.java (created)
+23/07/2005 internal restructure of resources (property files and images)
+
+22/07/2005 minor code modifications to many of the sources:
+           made more classes to be of type final
+           removed serialVersionUID, it seems it's not required.
+
+
+
+
+Changes in version 1.20 (13/07/2005)
+------------------------------------
+
+13/07/2005 JTester.java (modified)
+           Added support for JTypeSafeTester.java
+
+13/07/2005 JTypeSafeTester.java (added)
+
+13/07/2005 SwingConfigurationManager.java (added)
+
+13/07/2005 CustomFocusTraversalPolicy.java (added)
+
+13/07/2005 SelectAllTextOnFocus.java (added)
+
+13/07/2005 TypeSafeTextDocumentFilter.java (added)
+
+13/07/2005 TypeSafeVerifier.java (added)
+
+13/07/2005 JDesktopTester.java (modified)
+           Replaced System.out with a popup window.
+           
+13/07/2005 GUIUtils.java (modified)
+           Added method lockJTableColumnWidth(TableColumn tc, int pixels)
+           Added method hideJTableColumn(TableColumn tc)
+
+
+
+
+Changes in version 1.08 (13/04/2005)
+------------------------------------
+
+13/04/2004 WindowManager.java (modified)
+           Reset the position for 'autopositioned' frames to 0,0 within the
+           desktop if this is the first frame placed in the desktop. Usefull
+           when we close all frames, the next frame opened will be placed
+           aging at the starting point in the desktop.
+
+13/04/2005 JConsoleTester.java (modified)
+           Changed in order to reflect the changes to JConsole.
+
+13/04/2005 JConsole.java (modified)
+           Redesinged the configuration process for the console with
+           simple getXXX() and setXXX() methods.
+           Redesigned the autosave and dump of the messages to log files.
+           Created a StringBuffer to store all the messages ever printed.
+           Added property file for gui strings.
+           
+12/04/2005 jconsole.properties (created)
+           Added greek translation.
+           
+07/04/2005 GlassPane.java (created)
+           SwingWorkerVariant.java (created)
+           Added modified swingworker from Yexin Chen's javaworld article.
+           
+07/04/2005 SwingWorker.java (created)
+           Added swingworker v3 class provided by Sun's tutorial.
+
+29/03/2005 singleappinstance.properties (modified)
+           Added italian translation.
+
+22/03/2005 CurrentDateHelper.java (modified)
+           Fixed static Calendar bug.
+           
+22/03/2005 SingleAppInstance.java (modified)
+           Changed exit() codes for each case.
+
+
+
+
+Changes in version 1.07 (14/03/2005)
+------------------------------------
+
+14/03/2005 JDesktopTester.java (modified)
+           Changed in order to add functionality for JInternalFrameGenerator.
+
+14/03/2005 JInternalFrameGenerator.java (new class)
+           Helper class for JDesktopTester,
+           creates new internal frames to test.
+
+13/03/2005 WindowManager.java (modified)
+           Generated an auto frame position functionality to automatically
+           place new internal frames within the desktop. Also added a new
+           method: is_internal_frame_listener_attached(), in order to avoid
+           adding the same listener multiple times.
+
+12/03/2005 JTester.java (modified)
+           Changed in order to reflect the changes of SingleAppInstance.
+
+12/03/2005 SingleAppInstance.java (modified) 
+           Changed in order to be able to change the filename,
+           new method added: getInstance(String filename).
+
+11/03/2005 JToolBarTester.java (modified)
+           Changed to reflect the OutLookToolBar changes.
+
+11/03/2005 OutLookToolBar.java (modified)
+           Changed in order to automatically be notified
+           off new buttons and invoke transform(). Method transform()
+           has been made private, no need to manually invoke it anymore.
+
+06/03/2005 minor code cleanup for all tests
+
+05/03/2005 added javadocs for the library
+
+04/03/2005 minor code modifications to most of the sources:
+           made more classes to be of type final and static
+           added serialVersionUID were needed, etc.
+
+01/03/2005 IOHelper.java (bug fix and code improvements for)
+           methods:
+           createDirectoryTreeForFolder(),
+           createDirectoryTreeForFile(),
+           saveTxtFile()
+           readTxtFile()
+           copyFile()
+           
+25/02/2005 modifications to many class files for Java 1.5 generics
+
+
+
+
+Changes in version 1.06 (25/01/2005)
+------------------------------------
+
+25/01/2005 added new functionality to JSplash:
+           (new class) JSplashLabel.java
+           (modified) JSplash.java
+           (modified) JSplashTester.java
+
+24/01/2005 changed build.xml file in order to separate the zeus-jscl.jar
+           from the test classes. Created for that reason a second jar file:
+           zeus-jscl-test.jar
+
+24/01/2005 modified SingleAppInstance's properties in order to
+           support multiple locales
+
+24/01/2005 modified JTester.java to reflect nanotimer changes
+
+24/01/2005 new timer class wrapper with nanoseconds precision (JDK 1.5):
+           SimpleTimerNanos.java
+
+24/01/2005 renamed SimpleTimer.java to SimpleTimerMillis.java
+
+22/01/2005 moved from JDK 1.4 to JDK 1.5, minor code changes
+           in order to get rid of JDK 1.5 deprecations:
+           JConsoleTester.java
+           JDesktopTester.java
+           JSplashTester.java
+           JTableSortTester.java
+           JTester.java
+           JToolBarTester.java
+
+
+
+
+Changes in version 1.05 (06/01/2005)
+------------------------------------
+
+06/01/2005 modified JTester for SingleAppInstance and SimpleTimer demo
+
+06/01/2005 new helper component:
+           SingleAppInstance.java
+
+05/01/2005 new libraries:           
+           SimpleTimer.java
+           DateHelper.java
+           
+05/01/2005 new methods:
+           GUIUtils.java,  maximizeJFrame()
+           
+29/11/2004 minor performance modifications:
+           CurrentDateHelper.java
+
+
+
+
+Changes in version 1.04 (12/11/2004)
+------------------------------------
+
+11/11/2004 modified JTester for JDesktopTester
+
+11/11/2004 added new test application:
+           JDesktopTester.java
+
+11/11/2004 added new classes for a swing component (JDesktop Window Manager):
+           WindowManager.java
+           JInternalFrameComparator.java
+
+28/10/2004 modified JTester for JToolBarTester
+
+28/10/2004 added new test application:
+           JToolBarTester.java
+
+28/10/2004 added new swing component for outlook like JToolBar behavior:
+           OutLookToolBar.java
+
+
+
+
+Changes in version 1.02 (23/10/2004)
+------------------------------------
+
+22/10/2004 modified JTester for JTableSortTester
+
+22/10/2004 added new test application:
+           JTableSortTester.java
+
+22/10/2004 added new classes for JTable sorting swing component:
+           BevelArrowIcon.java
+           BlankIcon.java
+           SortableTableModel.java
+           SortButtonHeaderListener.java
+           SortButtonRenderer.java
+           TableSorter.java
+
+22/10/2004 added new swing component for JTable cell rendering of a 
+           progress bar: ProgressBarCellRenderer.java
+
+22/10/2004 modified JSplashTester in order to apply the new
+           JSplash functionality.
+
+22/10/2004 modified JSplash, added functionality for
+           percent or custom messages display during loading.
+
+
+
+
+Changes in version 1.0 beta 2 (22/07/2004)
+------------------------------------------
+
+22/07/2004 added new functionality to JConsole,
+           auto save messages to the trace file and
+           limit the characters displayed in
+           textarea for performance issues
+
+22/07/2004 new test application:
+           JTester.java, a wrapper for all tests
+
+21/07/2004 added new test application:
+           JSplashTester.java
+
+21/07/2004 added new swing component:
+           JSplash.java
+           
+21/07/2004 added new library:
+           GUIUtils.java
+
+
+
+
+Version 1.0 beta (19/07/2004)
+-----------------------------
+Initial version
+
+19/07/2004 added first test application:
+           JConsoleTester.java
+
+16/07/2004 added first swing component:
+           JConsole.java
+
+15/07/2004 initial creation of the library, added utils:
+           CurrentDateHelper.java
+           IOHelper.java
+           SimpleUIDGenerator.java

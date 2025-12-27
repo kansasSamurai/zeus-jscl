@@ -1,0 +1,43 @@
+General
+-------
+
+- change license to LGPLv3
+- right click menu for basic textcomponents actions, e.g. copy/cut/paste
+- New SwingWorker
+- Binding helper
+- web site for zeus
+
+
+TypeSafe
+--------
+
+- tooltips for textfields...
+- examples for editable JComboboxes e.g. (JTextField) comboBox.getEditor().getEditorComponent()
+
+
+AutoResizeTableColumns
+----------------------
+
+- option to take into consideration the header ico if any
+- BUG: model.fireTableDataChanged(), should be fired each time we add or remove rows
+      (strange bug with single row tables; don't know if it occurs always!).
+
+
+JSplash
+-------
+
+- add more methods for image loading e.g. from file
+- change colors for progress bar
+
+
+WindowManager
+-------------
+
+- internalazation
+- find free icons to use
+
+
+JMessage
+--------
+
+- change arrow icon

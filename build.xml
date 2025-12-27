@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="all" name="zeus-jscl">
+
+
+    <target name="init">
+	    <property name="project.version" value="1.72" />
+        <property location="classes" name="classes.dir" />
+        <property location="src" name="src.dir" />
+        <property location="doc/api" name="javadoc.dir" />
+        <property name="project.name" value="${ant.project.name}" />
+        <property location="lib/${project.name}-${project.version}.jar" name="jar" />
+        <property location="test/${project.name}-test.jar" name="jar-test" />
+    </target>
+
+
+    <target depends="init" name="compile">
+        <!-- Both srcdir and destdir should be package roots. -->
+        <mkdir dir="${classes.dir}" />
+        <javac debug="true" deprecation="true" destdir="${classes.dir}" srcdir="${src.dir}">
+            <!-- To add something to the classpath: -->
+            <!-- <classpath><pathelement location="${mylib}"/></classpath> -->
+            <!-- To exclude some files: -->
+            <!-- <exclude name="com/foo/SomeFile.java"/><exclude name="com/foo/somepackage/"/> -->
+        </javac>
+    </target>
+
+
+    <target depends="init,compile" name="jar">
+        <!-- normal jar -->
+        <jar basedir="${classes.dir}" compress="true" jarfile="${jar}" excludes="gr/zeus/tests/**">
+            <fileset dir="${src.dir}" includes="**/*.png,**/*.jpg,**/*.gif,**/*.properties,**/*license*.txt" excludes="gr/zeus/tests/**" />
+        </jar>
+        
+        <!-- tests jar -->
+        <jar basedir="${classes.dir}" compress="true" jarfile="${jar-test}" includes="gr/zeus/tests/**">
+            <manifest>
+                <attribute name="Main-Class" value="gr.zeus.tests.JTester" />
+                <attribute name="Class-Path" value="../lib/${project.name}-${project.version}.jar" />
+            </manifest>
+            <fileset dir="${src.dir}" includes="gr/zeus/tests/**/*.png,gr/zeus/tests/**/*.jpg,gr/zeus/tests/**/*.gif,gr/zeus/tests/**/*.properties" />
+        <!--    <fileset dir="${src.dir}" includes="gr/zeus/tests/**" /> -->
+        </jar>        
+    </target>
+
+
+    <target depends="init,jar,javadoc" description="Build everything." name="all" />
+
+
+    <target depends="init" description="Javadoc for my API." name="javadoc">
+        <mkdir dir="${javadoc.dir}" />
+        <javadoc destdir="${javadoc.dir}" packagenames="*" excludepackagenames="gr.zeus.tests.*">
+            <sourcepath>
+                <pathelement location="${src.dir}" />
+            </sourcepath>
+        </javadoc>
+    </target>
+
+
+    <target depends="init" description="Clean all build products." name="clean">
+        <delete dir="${classes.dir}" />
+        <delete dir="${javadoc.dir}" />
+        <delete file="${jar}" />
+        <delete file="${jar-test}" />
+    </target>
+
+
+</project>

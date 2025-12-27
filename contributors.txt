@@ -1,0 +1,12 @@
+Brian Ngure (ngure76@yahoo.com)
+-------------------------------
+
+03/2005: Written and generated the initial javadocs for the library.
+
+
+
+
+Riccardo Govoni (battlehorse@virgilio.it)
+-----------------------------------------
+
+03/2005: Italian translation for singleappinstance.properties
