@@ -1,0 +1,18 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>gr.zeus</groupId>
+    <artifactId>zeus8-parent</artifactId>
+    <version>8.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>core</module>
+        <module>demo</module>
+        <module>dist</module>
+    </modules>
+    
+    <!-- Common dependencies, plugin management, etc. -->
+
+</project>
+
