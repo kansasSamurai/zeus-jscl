@@ -2,6 +2,8 @@
 .project
 .classpath
 .settings/
+bin/
+# pre maven, you have to add Java "facet" to your Eclipse project to see a bin/ directory.
 
 
 # === Maven :: https://github.com/github/gitignore/blob/main/Maven.gitignore
@@ -22,6 +24,7 @@ buildNumber.properties
 # Pre-Maven / 1.74 and below
 .project
 # .project is NetBeans
+doc/
 lib/
 classes/
 test/zeus-jscl-test.jar
