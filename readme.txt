@@ -213,3 +213,16 @@ FOR DEVELOPERS
   A small ANT script is also available to you. Execute it from the command
   line (need ant installation): 'build.bat', 'clean.bat'
   You should modify the: 'cp.bat', to match your installation.
+  
+Addendum:
+This project requires Java8 and Ant 1.10*.
+(A refactor for Maven is in progress)
+
+If you use SDKMAN (which I strongly recommend), I have added
+the .sdkmanrc file - then you can simply use the following commands:
+> sdk env install
+> ant clean
+> ant clean all
+
+* As I am not the original author, the Ant version is simply a latest
+version I have that seems compatible.  
